@@ -6,7 +6,15 @@ fastqc Malawi_HIV.fastq.gz
 #If Quality is good, proceed to Assembly
 iva --fr Malawi_HIV.fastq.gz iva_output
 
-#Indext the HIV_ref.fasta
+#open the directory containing assembled reads (contigs)
+cd iva_output
+
+#blast your contigs
+blastn -task megablast -query contigs.fasta -db nt -remote -out results.txt -outfmt 6
+
+#Validate your results by uploading the highest performing contigs to REGA 
+
+#Index the subtype specific reference downloaded manually in a local database
 bwa index HIV_ref.fasta
 
 #align
