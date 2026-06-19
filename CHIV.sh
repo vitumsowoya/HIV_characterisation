@@ -24,11 +24,21 @@ bwa mem -t 4 HIV_ref.fasta Malawi_HIV.fastq.gz > aln.sam
 samtools view -bS aln.sam | samtools sort -o aln.bam
 samtools index aln.bam
 
-# 8. consensus assembly
+consensus assembly
 samtools mpileup -A -d 0 -Q 0 -f HIV_ref.fasta aln.bam | ivar consensus -p consensus -t 0.6
 
-#install biopython becuase it will be needed when insialling liftoff which is used for annotation
-conda install -c conda-forge biopython
+#install mamba because it is faster than conda at resolvoing dependencies
+conda install -n base -c conda-forge mamba
 
-#Download liftoff which is for annotation
-conda install -c bioconda liftoff
+#create a new environment to run liftoff which will be used for annotating the genome
+mamba create -n liftoff_env
+
+#activate the environment
+conda activate liftoff_env
+
+#install liftoff
+mamba install -c conda-forge -c bioconda liftoff
+
+#check if it is working
+liftoff -h
+
