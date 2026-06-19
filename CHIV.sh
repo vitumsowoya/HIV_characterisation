@@ -26,3 +26,9 @@ samtools index aln.bam
 
 # 8. consensus assembly
 samtools mpileup -A -d 0 -Q 0 -f HIV_ref.fasta aln.bam | ivar consensus -p consensus -t 0.6
+
+#install biopython becuase it will be needed when insialling liftoff which is used for annotation
+conda install -c conda-forge biopython
+
+#Download liftoff which is for annotation
+conda install -c bioconda liftoff
