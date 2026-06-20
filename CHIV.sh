@@ -24,6 +24,8 @@ bwa mem -t 4 HIV_ref.fasta Malawi_HIV.fastq.gz > aln.sam
 samtools view -bS aln.sam | samtools sort -o aln.bam
 samtools index aln.bam
 
+#visualise bam file using the interactive genome visualiser, you can download it from any of your browsers
+
 consensus assembly
 samtools mpileup -A -d 0 -Q 0 -f HIV_ref.fasta aln.bam | ivar consensus -p consensus -t 0.6
 
