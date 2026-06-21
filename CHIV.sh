@@ -52,4 +52,6 @@ samtools faidx HIV_consensus.fa
 
 seqkit subseq -r 2097:5108 HIV_consensus.fa > pol.fasta
 
+#upload to HIVDB to characterise the resistome
+
 #to visualise, use python, download jbroswer from edge/chrome/whatever browser, upload HIV_consensus.fa, HIV_consensus.fai and the gff3 file from liftoff
