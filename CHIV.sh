@@ -26,7 +26,8 @@ samtools index aln.bam
 
 #visualise bam file using the interactive genome visualiser, you can download it from any of your browsers
 
-consensus assembly
+#consensus assembly
+
 samtools mpileup -A -d 0 -Q 0 -f HIV_ref.fasta aln.bam | ivar consensus -p consensus -t 0.6
 
 #install mamba because it is faster than conda at resolvoing dependencies
