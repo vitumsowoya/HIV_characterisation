@@ -6,6 +6,9 @@ fastqc Malawi_HIV.fastq.gz
 #If Quality is good, proceed to Assembly
 iva --fr Malawi_HIV.fastq.gz iva_output
 
+python3 ~/tools/quast-5.3.0/quast.py contigs.fasta -o quast_output
+
+
 #open the directory containing assembled reads (contigs)
 cd iva_output
 
@@ -23,7 +26,10 @@ bwa mem -t 4 HIV_ref.fasta Malawi_HIV.fastq.gz > aln.sam
 # fix BAM pipeline
 samtools view -bS aln.sam | samtools sort -o aln.bam
 samtools index aln.bam
-
+samtools flagstat aln.bam > mapping_stats.txt
+samtools coverage aln.bam > coverage_stats.txt
+samtools depth -a aln.bam > depth.txt
+samtools depth -a aln.bam | awk '{sum+=$3} END {print sum/NR}'
 #visualise bam file using the interactive genome visualiser, you can download it from any of your browsers
 
 #consensus assembly
