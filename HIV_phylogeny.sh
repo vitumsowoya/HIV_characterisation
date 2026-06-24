@@ -14,9 +14,23 @@ mafft --auto hiv_phylo_trial2.fa > HIV_phylo_trial_aligned.fa
 iqtree -s HIV_phylo_trial_aligned.fa -m GTR+G -bb 1000 -nt AUTO
 
 #to create consensus genomes
-mafft --auto HIV_B_metadata.fasta > b_aligned.fa
-seqkit rename b_aligned.fa -o b_aligned_renamed.fa
-cons -sequence b_aligned_renamed.fa -outseq b_consensus.fa
+#mafft --auto HIV_B_metadata.fasta > b_aligned.fa
+#seqkit rename b_aligned.fa -o b_aligned_renamed.fa
+# Alignment
+mafft --auto --thread 4 all_subtypes.fa > all_subtypes_aligned.fa
+
+# Ensure unique sequence names
+seqkit rename all_subtypes_aligned.fa -o all_subtypes_aligned_renamed.fa
+
+# Tree inference
+iqtree \
+-s all_subtypes_aligned_renamed.fa \
+-m GTR+F+R5 \
+-bb 1000 \
+-alrt 1000 \
+-nt 4 \
+-redo
+#cons -sequence b_aligned_renamed.fa -outseq b_consensus.fa
 #
 cat subtype_a1_ref.fasta subtype_c_ref.fasta subtype_b_ref.fasta subtype_d_ref.fasta > hiv_subtypes.fa
 mafft --auto hiv_subtypes.fa > hiv_subtypes_aligned.fa
