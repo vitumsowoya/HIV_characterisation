@@ -16,10 +16,26 @@ cd iva_output
 blastn -task megablast -query contigs.fasta -db nt -remote -out results.txt -outfmt 6
 
 #Validate your results by uploading the highest performing contigs to REGA 
-
-#Index the subtype specific reference downloaded manually in a local database
 bwa index HIV_ref.fasta
 
+#align
+bwa mem -t 4 HIV_ref.fasta contigs.fasta > contigs.sam
+
+# fix BAM pipeline
+samtools view -bS contigs.sam | samtools sort -o contigs.bam
+samtools index contigs.bam
+#Index the subtype specific reference downloaded manually in a local database
+bwa index c.fa
+bwa mem -t 4 c.fa d.fa > alignment.sam
+
+# fix BAM pipeline
+samtools view -bS alignment.sam | samtools sort -o alignment.bam
+samtools index alignment.bam
+samtools index contigs.bam
+mamba create -n ragtag_env
+conda activate ragtag_env
+mamba install -c bioconda ragtag
+ragtag.py scaffold HIV_ref.fasta contigs.fasta
 #align
 bwa mem -t 4 HIV_ref.fasta Malawi_HIV.fastq.gz > aln.sam
 
