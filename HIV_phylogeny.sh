@@ -35,6 +35,7 @@ iqtree \
 cat subtype_a1_ref.fasta subtype_c_ref.fasta subtype_b_ref.fasta subtype_d_ref.fasta > hiv_subtypes.fa
 mafft --auto hiv_subtypes.fa > hiv_subtypes_aligned.fa
 iqtree -s hiv_subtypes_aligned.fa -m TEST -redo -nt AUTO
+conda activate hiv_new
 conda install artemis
 
 #SBATCH --error=GPU-Test%j.err
