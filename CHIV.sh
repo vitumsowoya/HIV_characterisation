@@ -13,7 +13,8 @@ trimmomatic SE -phred33 \
 fastqc fastqc Malawi_HIV.trimmed.fastq.gz 
 
 #If Quality is good, proceed to Assembly
-iva --fr Malawi_HIV.fastq.gz iva_output
+
+iva --fr Malawi_HIV.trimmed.fastq.gz iva_output
 
 python3 ~/tools/quast-5.3.0/quast.py contigs.fasta -o quast_output
 
