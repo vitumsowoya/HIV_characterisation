@@ -1,1 +1,5 @@
 conda install -c bioconda fastqc
+conda install -c bioconda trimmomatic
+
+#make sure to always check version of installed tools and document by writing "-version" at the end of tool name i.e
+fastqc -version
