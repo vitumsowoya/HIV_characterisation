@@ -1,0 +1,6 @@
+# Ignore raw sequencing data
+*.fastq.gz
+*.fq.gz
+
+# Ignore Windows metadata streams
+*:Zone.Identifier
