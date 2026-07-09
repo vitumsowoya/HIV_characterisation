@@ -18,7 +18,6 @@ module load iqtree/2.3.6
 
 # Run workflow
 mafft --auto --thread $SLURM_NTASKS hiv_phylo.fa > all_subtypes_aligned.fa
-
 seqkit rename all_subtypes_aligned.fa -o all_subtypes_aligned_renamed.fa
 
 iqtree \
