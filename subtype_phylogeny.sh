@@ -17,13 +17,11 @@ module load MAFFT/7.520-GCC-12.3.0-with-extensions
 module load iqtree/2.3.6
 
 # Run workflow
-mafft --auto --thread $SLURM_NTASKS hiv_phylo.fa > all_subtypes_aligned.fa
-seqkit rename all_subtypes_aligned.fa -o all_subtypes_aligned_renamed.fa
-
+mafft --auto --thread 4 all_subtypes_renamed.fa > all_subtypes_aligned_renamed.fa
 iqtree \
-  -s all_subtypes_aligned_renamed.fa \
-  -m GTR+F+R5 \
-  -bb 1000 \
-  -alrt 1000 \
-  -nt $SLURM_NTASKS \
-  -redo
+-s all_subtypes_aligned_renamed.fa \
+-m GTR+F+R5 \
+-bb 1000 \
+-alrt 1000 \
+-nt 4 \
+-redo
