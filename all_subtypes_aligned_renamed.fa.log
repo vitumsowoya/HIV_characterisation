@@ -1,0 +1,352 @@
+IQ-TREE version 3.0.1 for Linux x86 64-bit built Jul  9 2025
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    Vitumbiko (AVX2, FMA3, 7 GB RAM)
+Command: iqtree -s all_subtypes_aligned_renamed.fa -m GTR+F+R5 -bb 1000 -alrt 1000 -nt 4 -redo
+Seed:    165959 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Thu Jul  9 14:40:39 2026
+Kernel:  AVX+FMA - 4 threads (12 CPU cores detected)
+
+Reading alignment file all_subtypes_aligned_renamed.fa ... Fasta format detected
+Reading fasta file: done in 0.0421062 secs using 83.43% CPU
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 0.0337652 secs using 200.4% CPU
+WARNING: 70 sites contain only gaps or ambiguous characters.
+Alignment has 231 sequences with 12286 columns, 8391 distinct patterns
+6652 parsimony-informative, 1076 singleton sites, 4558 constant sites
+                                                  Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.00323645 secs using 224.4% CPU
+   1  U.MW.1982.62eMa82.AY146226                         96.29%    passed      6.66%
+   2  U.MW.1988.84eMa88.AY146227                         96.29%    failed      1.74%
+   3  U.MW.1988.85eMa88.AY146228                         97.07%    passed      6.16%
+   4  U.MW.1982.171ema82.AY146229                        96.26%    passed     10.38%
+   5  U.MW.1984.38gMa84.AY146247                         94.81%    passed     11.41%
+   6  U.MW.1982.62gMa82.AY146248                         94.80%    failed      0.63%
+   7  U.MW.1988.84gMa88.AY146249                         94.81%    failed      1.18%
+   8  U.MW.1988.85gMa88.AY146250                         94.81%    failed      2.23%
+   9  U.MW.1988.141gMa88.AY146251                        94.80%    failed      3.62%
+  10  U.MW.1982.171gMa82.AY146252                        94.80%    failed      3.14%
+  11  U.MW.2004.LTS30_2004.JN393523                      94.60%    passed      9.37%
+  12  U.MW.2010.LTS30_2010.JN393524                      94.40%    passed      9.37%
+  13  U.MW.2010.LTS30_2010.JN393533                      94.94%    passed      8.41%
+  14  U.MW.2009.4009_CSF_Visit1_amplicon10.KC187216      78.81%    passed     11.63%
+  15  U.MW.2009.4009_CSF_Visit1_amplicon11.KC187217      78.83%    passed      9.73%
+  16  U.MW.2009.4009_CSF_Visit1_amplicon12.KC187218      78.83%    passed      8.80%
+  17  U.MW.2009.4009_CSF_Visit1_amplicon13.KC187219      78.83%    passed     12.75%
+  18  U.MW.2009.4009_CSF_Visit1_amplicon17.KC187220      78.81%    passed     10.09%
+  19  U.MW.2009.4009_CSF_Visit1_amplicon20.KC187221      78.83%    passed     12.28%
+  20  U.MW.2009.4009_CSF_Visit1_amplicon22.KC187222      78.81%    passed     12.31%
+  21  U.MW.2009.4009_CSF_Visit1_amplicon25.KC187223      78.85%    passed     15.19%
+  22  U.MW.2009.4009_CSF_Visit1_amplicon26.KC187224      78.81%    passed      9.25%
+  23  U.MW.2009.4009_CSF_Visit1_amplicon28.KC187225      78.83%    passed      9.27%
+  24  U.MW.2009.4009_CSF_Visit1_amplicon29.KC187226      78.81%    passed     10.85%
+  25  U.MW.2009.4009_CSF_Visit1_amplicon4.KC187227       78.81%    passed     12.09%
+  26  U.MW.2009.4009_CSF_Visit1_amplicon5.KC187228       78.81%    passed     10.66%
+  27  U.MW.2009.4009_CSF_Visit1_amplicon6.KC187229       78.93%    passed     10.13%
+  28  U.MW.2009.4009_CSF_Visit1_amplicon8.KC187230       78.81%    passed     11.46%
+  29  U.MW.2009.4009_CSF_Visit1_amplicon9.KC187231       78.83%    passed     14.01%
+  30  U.MW.2009.4009_Plasma_Visit1_amplicon10.KC187232   78.81%    passed     19.16%
+  31  U.MW.2009.4009_Plasma_Visit1_amplicon15.KC187233   78.83%    passed     12.43%
+  32  U.MW.2009.4009_Plasma_Visit1_amplicon16.KC187234   78.78%    passed     11.75%
+  33  U.MW.2009.4009_Plasma_Visit1_amplicon17.KC187235   78.81%    passed     11.17%
+  34  U.MW.2009.4009_Plasma_Visit1_amplicon18.KC187236   78.81%    passed     11.80%
+  35  U.MW.2009.4009_Plasma_Visit1_amplicon20.KC187237   78.81%    passed     11.85%
+  36  U.MW.2009.4009_Plasma_Visit1_amplicon21.KC187238   78.83%    passed     14.75%
+  37  U.MW.2009.4009_Plasma_Visit1_amplicon22.KC187239   78.81%    passed     14.01%
+  38  U.MW.2009.4009_Plasma_Visit1_amplicon23.KC187240   78.83%    passed     11.69%
+  39  U.MW.2009.4009_Plasma_Visit1_amplicon26.KC187241   78.78%    passed     13.35%
+  40  U.MW.2009.4009_Plasma_Visit1_amplicon4.KC187242    78.83%    passed     13.96%
+  41  U.MW.2009.4009_Plasma_Visit1_amplicon5.KC187243    78.83%    passed     11.56%
+  42  U.MW.2009.4009_Plasma_Visit1_amplicon6.KC187244    78.81%    passed     11.17%
+  43  U.MW.2009.4009_Plasma_Visit1_amplicon7.KC187245    78.83%    passed     13.09%
+  44  U.MW.2009.4009_Plasma_Visit1_amplicon9.KC187246    78.85%    passed     12.57%
+  45  MY_SAMPLE                                          20.80%    passed     32.03%
+  46  F1.BE.2023.R33_MRC16_LN_u8r1.PV028622              27.48%    passed     67.42%
+  47  F1.BE.2023.R31_MRC16_PB_u25.PV028614               27.55%    passed     69.35%
+  48  F1.CD.2018.CD19-0700.PX241770                      27.24%    passed     85.68%
+  49  F1.CD.2017.18CD-0698.PX241729                      22.17%    passed     48.33%
+  50  F1.CD.2017.18CD-0670.PX241725                      22.60%    passed     35.72%
+  51  F1.BE.2017.CH.MN486030                             29.51%    passed     72.96%
+  52  F1.CD.2017.18CD-0777.PX241735                      28.17%    passed     85.17%
+  53  F1.BE.2017.EC.MT417765                             28.41%    passed     76.22%
+  54  F1.CD.2017.231.PX241652                            24.48%    passed     93.50%
+  55  F1.ES.2015.100599.KY989955                         27.67%    passed     95.46%
+  56  F1.ES.2015.P4346.MK177827                          27.47%    passed     88.94%
+  57  F1.GB.2014.14535_1_29.3.MF109526                   31.48%    passed     54.48%
+  58  F1.ES.2014.ARP1200.KT276260                        27.36%    passed     96.86%
+  59  F1.BG.2008.S_08_002.MH746263                       27.90%    passed     76.47%
+  60  F1.CY.2008.CY222.JF683771                          34.10%    passed     22.44%
+  61  F2.CM.1997.CM53657.AF377956                        28.52%    passed     73.23%
+  62  F2.CM.1995.95CM-MP255.AJ249236                     30.37%    passed     15.70%
+  63  F2.CM.1995.95CM-MP257.AJ249237                     30.09%    passed     27.41%
+  64  F2.CM.2002.02CM_0016BBY.AY371158                   32.04%    passed     16.57%
+  65  F2.CM.2010.DEMF210CM001.JX140672                   27.51%    passed     97.94%
+  66  F2.CM.2010.DEMF210CM007.JX140673                   27.27%    passed     95.01%
+  67  F2.CM.2011.DEMF211CM025.KU749420                   26.62%    passed     87.59%
+  68  F2.CM.2011.DEURF11CM026.KU749422                   24.57%    passed     78.78%
+  69  F2.CM.2010.Read2_HIV_F2.KX228809                   29.21%    passed     98.12%
+  70  F2.CM.2001.A1699.MH705144                          20.22%    passed     73.09%
+  71  F2.CM.2010.LB022_1.MK086131                        29.24%    passed     78.76%
+  72  F2.CM.2008.08CMBDSH132.MN153483                    27.94%    passed     45.43%
+  73  F2.CM.2008.08CMBDSH24.MN153485                     27.93%    passed     79.10%
+  74  F2.CM.2011.11CMMDC224.MT349417                     27.93%    passed     70.69%
+  75  O.GA.2011.11Gab6352.JX245015                       24.71%    passed     38.09%
+  76  O.US.2010.LTNP.JN571034                            25.91%    passed     10.11%
+  77  O.GA.2010.10Gab1190.JX245014                       25.47%    passed     54.83%
+  78  O.FR.2006.LA55RBF206.KU168298                      19.86%    passed     34.29%
+  79  O.FR.2006.RBF206.KY112585                          19.54%    passed     32.54%
+  80  O.CM.2006.20-02.MH705150                           19.77%    failed      4.65%
+  81  O.FR.2005.LA49RBF189.KU168292                      19.30%    failed      0.81%
+  82  O.FR.2003.LA32RBF140.KU168284                      20.05%    passed      9.62%
+  83  O.FR.2003.LA31BCF108.KU168283                      20.93%    failed      0.72%
+  84  O.CM.2003.296.MH705148                             19.92%    passed      9.34%
+  85  O.CM.2003.1225-51.MH705149                         20.21%    failed      0.19%
+  86  O.FR.2002.LA34RBF130.KU168286                      19.82%    failed      2.16%
+  87  O.FR.2001.LA46BCF03.KU168289                       19.84%    failed      4.39%
+  88  O.ES.2001.Read25_HIV_GroupO.KX228804               26.12%    passed     49.15%
+  89  O.CM.1999.99CMU4122.AY169815                       25.43%    passed     30.72%
+  90  GOR.CM.2013.SIVgor-BPID15.KP004990                 26.69%    passed     10.83%
+  91  GOR.CM.2012.SIVgor-BQID2.KP004991                  25.22%    failed      4.77%
+  92  CPZ.TZ.2009.UG38.JN091690                          24.44%    failed      2.31%
+  93  CPZ.CM.2009.Ptt_09Cam155.FR686511                  20.19%    passed      5.36%
+  94  N.CM.1995.YBF30.AJ006022                           25.26%    passed     78.76%
+  95  N.CM.1997.YBF106.AJ271370                          26.61%    passed     95.65%
+  96  N.CM.2002.DJO0131.AY532635                         27.30%    passed     94.77%
+  97  N.CM.2004.04CM_1015_04.DQ017382                    27.56%    passed     88.13%
+  98  N.CM.2004.04CM_1131_03.DQ017383                    27.25%    passed     66.79%
+  99  N.CM.2006.U14842.GQ324958                          30.01%    passed     67.25%
+ 100  N.CM.2002.SJGddd.GQ324959                          29.97%    passed     90.98%
+ 101  N.CM.2006.U14296.GQ324962                          30.73%    passed     78.55%
+ 102  N.FR.2011.N1_FR_2011.JN572926                      27.76%    passed     82.90%
+ 103  N.CM.2015.S4858.KY498771                           26.24%    passed     57.05%
+ 104  N.CM.2014.14003718.MF767262                        26.07%    passed     75.34%
+ 105  O.GA.2011.11Gab6352.JX245015_2                     24.71%    passed     38.09%
+ 106  O.US.2010.LTNP.JN571034_2                          25.91%    passed     10.11%
+ 107  O.GA.2010.10Gab1190.JX245014_2                     25.47%    passed     54.83%
+ 108  O.FR.2006.LA55RBF206.KU168298_2                    19.86%    passed     34.29%
+ 109  O.FR.2006.RBF206.KY112585_2                        19.54%    passed     32.54%
+ 110  O.CM.2006.20-02.MH705150_2                         19.77%    failed      4.65%
+ 111  O.FR.2005.LA49RBF189.KU168292_2                    19.30%    failed      0.81%
+ 112  O.FR.2003.LA32RBF140.KU168284_2                    20.05%    passed      9.62%
+ 113  O.FR.2003.LA31BCF108.KU168283_2                    20.93%    failed      0.72%
+ 114  O.CM.2003.296.MH705148_2                           19.92%    passed      9.34%
+ 115  O.CM.2003.1225-51.MH705149_2                       20.21%    failed      0.19%
+ 116  O.FR.2002.LA34RBF130.KU168286_2                    19.82%    failed      2.16%
+ 117  O.FR.2001.LA46BCF03.KU168289_2                     19.84%    failed      4.39%
+ 118  O.ES.2001.Read25_HIV_GroupO.KX228804_2             26.12%    passed     49.15%
+ 119  O.CM.1999.99CMU4122.AY169815_2                     25.43%    passed     30.72%
+ 120  B.NZ.2024.P4_8_1_2024_DNA_4-C10_NFL.PX481104       27.73%    passed     39.85%
+ 121  B.NZ.2024.P4_8_1_2024_DNA_2-B6_NFL.PX481057        27.63%    passed     34.79%
+ 122  B.NZ.2024.P4_3_14_2024_RNA_E5_NFL.PX481038         26.59%    passed     62.51%
+ 123  B.NZ.2024.P4_3_14_2024_RNA_A4_NFL.PX481031         26.52%    passed     63.98%
+ 124  B.NZ.2024.P4_3_14_2024_RNA_B4_NFL.PX481034         26.44%    passed     65.62%
+ 125  B.NZ.2023.P4_12_21_2023_RNA_H12_NFL.PX481023       26.57%    passed     64.53%
+ 126  B.NZ.2023.P4_12_21_2023_RNA_C11_NFL.PX481019       26.59%    passed     72.40%
+ 127  B.NZ.2023.P4_12_21_2023_RNA_A2_NFL.PX481017        26.65%    passed     63.12%
+ 128  B.NZ.2023.P4_12_21_2023_RNA_H9_NFL.PX481026        26.52%    passed     81.12%
+ 129  B.NZ.2023.P4_12_21_2023_RNA_H7_NFL.PX481025        26.78%    passed     70.22%
+ 130  B.NZ.2023.P4_12_21_2023_RNA_B1_NFL.PX481018        26.66%    passed     73.11%
+ 131  B.US.2023.P01.sort3.P03.G05.PV775117               27.87%    passed     90.98%
+ 132  B.US.2023.P01.sort3.P03.E01.PV775114               27.24%    passed     97.24%
+ 133  B.US.2023.P01.sort3.P01.E12.PV775111               27.27%    passed     97.64%
+ 134  B.US.2023.P02.sort1.P05.A09.PV775247               27.27%    passed     99.76%
+ 135  B.US.2023.P02.sort1.P05.A04.PV775246               29.02%    passed     92.35%
+ 136  B.KR.2023.23KYY7-19224.PP271362                    29.27%    passed     57.51%
+ 137  B.KR.2023.23KYY7-19223.PP271361                    29.71%    passed     69.27%
+ 138  B.US.2023.P1043_GB1LV100084.PQ511577               27.42%    passed     29.43%
+ 139  B.US.2023.P1043_GB1LV100078.PQ511571               26.40%    passed     95.85%
+ 140  B.CN.2023.105090_376.PV136383                      27.40%    passed     51.14%
+ 141  B.CN.2023.105090_363.PV136382                      26.98%    passed     58.75%
+ 142  B.CN.2023.105090_305.PV136381                      26.88%    passed     64.16%
+ 143  B.CN.2023.105090_257.PV136380                      26.87%    passed     65.39%
+ 144  B.BE.2023.R31_MRC31_PB_C3.PV028890                 27.37%    passed     80.61%
+ 145  B.BE.2023.R55_MRC15_PB_C0b.PV028854                27.32%    passed     85.97%
+ 146  B.BE.2023.R31_MRC15_PB_C2.PV028804                 27.57%    passed     95.48%
+ 147  B.BE.2023.R43_MRC29_GALT_C1.PV028764               27.35%    passed     71.14%
+ 148  B.BE.2023.R43_MRC29_GALT_C0.PV028763               27.20%    passed     72.35%
+ 149  B.BE.2023.R28_MRC25_PB_C2.PV027549                 27.47%    passed     53.53%
+ 150  B.BE.2023.R28_MRC25_PB_C1.PV027548                 27.47%    passed     53.18%
+ 151  B.BE.2023.R26_MRC25_PB_C8.PV027530                 27.79%    passed     54.36%
+ 152  B.BE.2023.R26_MRC25_PB_C6.PV027529                 27.51%    passed     50.65%
+ 153  B.CA.2022.P4.CCND3.d22.OQ092467                    21.39%    passed     88.19%
+ 154  B.DK.2022.142_MIPseq_PBMC_Wk51_01.PX465959         26.84%    passed     56.87%
+ 155  B.DK.2022.142_MIPseq_PBMC_Wk34_01.PX465952         27.01%    passed     56.85%
+ 156  C.NP.2023.Nepal_N0000841                           28.44%    passed     69.49%
+ 157  C.RU.2021.Vlad28                                   20.35%    passed     48.98%
+ 158  C.RW.2019.PSF_80M_Con                              28.40%    passed     36.86%
+ 159  C.MZ.2019.S10                                      26.84%    passed     65.14%
+ 160  C.MZ.2019.S09                                      26.84%    passed     66.51%
+ 161  C.MZ.2019.S08                                      26.84%    passed     66.65%
+ 162  C.MZ.2019.S17                                      27.01%    passed     62.70%
+ 163  C.MZ.2019.S16                                      27.01%    passed     64.43%
+ 164  C.MZ.2019.S15                                      27.01%    passed     63.08%
+ 165  C.MZ.2019.S14                                      27.01%    passed     65.41%
+ 166  C.MZ.2019.S13                                      27.01%    passed     64.88%
+ 167  C.MZ.2019.S12                                      27.01%    passed     64.88%
+ 168  C.MZ.2019.S11                                      26.84%    passed     65.14%
+ 169  C.US.2019.p2t4_qvoa_cmv_well7                      27.38%    passed     63.90%
+ 170  C.US.2019.p2t4_qvoa_cmvnr_well3                    27.23%    passed     50.16%
+ 171  C.US.2019.p2t4_qvoa_cmvnr_well2                    27.23%    passed     49.56%
+ 172  C.US.2019.p2t4_qvoa_cd3_well1                      27.23%    passed     51.36%
+ 173  C.US.2019.p2t4_qvoa_cd3_well2                      27.25%    passed     47.72%
+ 174  C.US.2018.0117M_2                                  26.70%    passed     91.74%
+ 175  C.IN.2018.2955                                     25.46%    passed     66.07%
+ 176  C.CD.2018.CD19-0433                                27.29%    passed     73.79%
+ 177  C.MZ.2017.S25                                      26.46%    passed     87.21%
+ 178  C.MZ.2017.S22                                      26.14%    passed     82.60%
+ 179  C.MZ.2017.S21                                      26.14%    passed     84.38%
+ 180  C.MZ.2017.S20                                      26.46%    passed     87.53%
+ 181  C.MZ.2017.S26                                      26.72%    passed     86.43%
+ 182  C.MW.2017.1-1276-5                                 33.75%    passed     32.38%
+ 183  C.MW.2017.1-1241-5                                 30.72%    passed     35.82%
+ 184  C.ZA.2017.CAP288-W43                               27.79%    passed     82.45%
+ 185  C.ZA.2017.CAP288-W37                               27.79%    passed     92.99%
+ 186  C.ZA.2017.CAP288-W20                               27.64%    passed     73.69%
+ 187  C.ZA.2017.CAP288-W11                               27.67%    passed     77.68%
+ 188  D.UG.2020.Donor_52_QVOA12.PP297243                 26.82%    passed     48.47%
+ 189  D.UG.2020.Donor_43_QVOA09.PP297240                 26.54%    passed     95.07%
+ 190  D.UG.2020.Donor_01_QVOA03.PP297234                 27.14%    passed     74.83%
+ 191  D.UG.2020.Donor_24_QVOA01.PP297232                 26.58%    passed     71.13%
+ 192  D.UG.2019.Donor_61_QVOA14.PP297245                 26.62%    passed     94.14%
+ 193  D.UG.2019.Donor_41_QVOA08.PP297239                 26.65%    passed     90.20%
+ 194  D.CD.2018.CD19-0214.PX241747                       27.34%    passed     97.50%
+ 195  D.CD.2018.CD19-0443.PX241755                       27.05%    passed     81.77%
+ 196  D.CD.2018.CD19-0579.PX241761                       21.79%    passed     64.34%
+ 197  D.CD.2017.18CD-0543.PX241714                       22.73%    passed     32.94%
+ 198  D.CD.2017.18CD-0863.PX241738                       26.74%    passed     80.99%
+ 199  D.CD.2017.150.PX241628                             26.66%    passed     72.20%
+ 200  D.CD.2017.16.PX241580                              21.15%    passed     48.84%
+ 201  D.CD.2017.62.PX241598                              27.24%    passed     63.08%
+ 202  D.CD.2017.112.PX241616                             25.39%    passed     57.99%
+ 203  D.UG.2017.Donor16_S6119X.OQ686134                  27.04%    passed     25.21%
+ 204  D.UG.2017.Donor16_S6117X.OQ686132                  27.80%    passed     29.87%
+ 205  D.UG.2017.Donor16_S6115X.OQ686130                  27.04%    passed     25.21%
+ 206  D.GB.2014.14535_1_3.3.MF109532                     31.16%    passed     29.55%
+ 207  D.GB.2013.15228_1_75.4.MF109713                    31.16%    passed     28.75%
+ 208  D.GB.2013.15228_1_51.3.MF109689                    31.25%    passed     45.97%
+ 209  D.GB.2013.15228_1_72.3.MF109710                    31.38%    passed     22.16%
+ 210  D.KE.2013.20920v0A_11.OM825099                     29.47%    passed     26.17%
+ 211  D.KE.2013.20920v0A_05.OM825098                     29.48%    passed     26.93%
+ 212  D.KE.2013.20920v0A_04.OM825097                     29.47%    passed     24.35%
+ 213  D.KE.2013.20920v0A_03.OM825096                     29.49%    passed     25.98%
+ 214  D.KE.2013.20920v0A_02.OM825095                     29.49%    passed     27.49%
+ 215  D.SE.2012.077UG.MF373180                           28.15%    passed     32.15%
+ 216  D.UG.2011.194535.MW006073                          20.74%    passed     51.45%
+ 217  D.UG.2011.194604.MW006076                          26.44%    passed     88.30%
+ 218  D.KE.2011.20631v03_11.OM825010                     27.71%    passed     91.86%
+ 219  D.KE.2011.20631v03_10.OM825009                     27.95%    passed     92.49%
+ 220  D.KE.2011.20631v03_09.OM825008                     27.70%    passed     92.26%
+ 221  D.KE.2011.20631v03_08.OM825007                     27.71%    passed     92.80%
+ 222  D.CM.2010.DEMD10CM009.JX140670                     27.03%    passed     95.67%
+ 223  D.CM.2010.DEMD10CM018.KP109501                     27.20%    passed     97.00%
+ 224  D.BR.2010.DEMD10BR034.KU749394                     24.52%    passed     98.57%
+ 225  D.US.2007.HIV_US_BID-V3121_2007.JQ403079           27.51%    passed     64.37%
+ 226  D.TZ.2004.CO6405V4.KX907406                        28.78%    passed     72.41%
+ 227  P.FR.2006.RBF168                                   29.93%    passed     44.69%
+ 228  P.FR.2009.RBF168                                   20.11%    failed      0.05%
+ 229  P.CM.2006.U14788                                   25.35%    failed      2.44%
+ 230  P.CM.2006.U14788_2                                 25.35%    failed      2.44%
+ 231  P.FR.-.DEPXXFR006                                  19.58%    failed      0.20%
+WARNING: 44 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                              37.18%  24 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: O.GA.2011.11Gab6352.JX245015_2 is identical to O.GA.2011.11Gab6352.JX245015 but kept for subsequent analysis
+NOTE: O.US.2010.LTNP.JN571034_2 is identical to O.US.2010.LTNP.JN571034 but kept for subsequent analysis
+NOTE: O.GA.2010.10Gab1190.JX245014_2 is identical to O.GA.2010.10Gab1190.JX245014 but kept for subsequent analysis
+NOTE: O.FR.2006.LA55RBF206.KU168298_2 is identical to O.FR.2006.LA55RBF206.KU168298 but kept for subsequent analysis
+NOTE: O.FR.2006.RBF206.KY112585_2 is identical to O.FR.2006.RBF206.KY112585 but kept for subsequent analysis
+NOTE: O.CM.2006.20-02.MH705150_2 is identical to O.CM.2006.20-02.MH705150 but kept for subsequent analysis
+NOTE: O.FR.2005.LA49RBF189.KU168292_2 is identical to O.FR.2005.LA49RBF189.KU168292 but kept for subsequent analysis
+NOTE: O.FR.2003.LA32RBF140.KU168284_2 is identical to O.FR.2003.LA32RBF140.KU168284 but kept for subsequent analysis
+NOTE: O.FR.2003.LA31BCF108.KU168283_2 is identical to O.FR.2003.LA31BCF108.KU168283 but kept for subsequent analysis
+NOTE: O.CM.2003.296.MH705148_2 is identical to O.CM.2003.296.MH705148 but kept for subsequent analysis
+NOTE: O.CM.2003.1225-51.MH705149_2 is identical to O.CM.2003.1225-51.MH705149 but kept for subsequent analysis
+NOTE: O.FR.2002.LA34RBF130.KU168286_2 is identical to O.FR.2002.LA34RBF130.KU168286 but kept for subsequent analysis
+NOTE: O.FR.2001.LA46BCF03.KU168289_2 is identical to O.FR.2001.LA46BCF03.KU168289 but kept for subsequent analysis
+NOTE: O.ES.2001.Read25_HIV_GroupO.KX228804_2 is identical to O.ES.2001.Read25_HIV_GroupO.KX228804 but kept for subsequent analysis
+NOTE: O.CM.1999.99CMU4122.AY169815_2 is identical to O.CM.1999.99CMU4122.AY169815 but kept for subsequent analysis
+NOTE: C.MZ.2019.S11 is identical to C.MZ.2019.S10 but kept for subsequent analysis
+NOTE: C.MZ.2019.S12 is identical to C.MZ.2019.S13 but kept for subsequent analysis
+NOTE: D.UG.2017.Donor16_S6115X.OQ686130 is identical to D.UG.2017.Donor16_S6119X.OQ686134 but kept for subsequent analysis
+NOTE: P.CM.2006.U14788_2 is identical to P.CM.2006.U14788 but kept for subsequent analysis
+Checking for duplicate sequences: done in 0.009764 secs using 359.5% CPU
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.334 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 165959)...
+
+NOTE: 346 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -342126.889
+2. Current log-likelihood: -319092.772
+3. Current log-likelihood: -318506.330
+4. Current log-likelihood: -318361.098
+5. Current log-likelihood: -318258.085
+6. Current log-likelihood: -318173.864
+7. Current log-likelihood: -318102.592
+8. Current log-likelihood: -318041.763
+9. Current log-likelihood: -317989.009
+10. Current log-likelihood: -317942.484
+11. Current log-likelihood: -317900.171
+12. Current log-likelihood: -317860.159
+13. Current log-likelihood: -317821.305
+14. Current log-likelihood: -317782.938
+15. Current log-likelihood: -317744.788
+16. Current log-likelihood: -317707.538
+17. Current log-likelihood: -317672.106
+18. Current log-likelihood: -317639.384
+19. Current log-likelihood: -317609.869
+20. Current log-likelihood: -317583.576
+21. Current log-likelihood: -317560.540
+22. Current log-likelihood: -317540.322
+23. Current log-likelihood: -317522.666
+24. Current log-likelihood: -317507.119
+25. Current log-likelihood: -317493.435
+26. Current log-likelihood: -317481.289
+27. Current log-likelihood: -317470.488
+28. Current log-likelihood: -317460.826
+29. Current log-likelihood: -317452.166
+30. Current log-likelihood: -317444.359
+31. Current log-likelihood: -317437.326
+32. Current log-likelihood: -317430.929
+33. Current log-likelihood: -317425.133
+34. Current log-likelihood: -317419.859
+35. Current log-likelihood: -317415.112
+36. Current log-likelihood: -317411.095
+37. Current log-likelihood: -317407.592
+38. Current log-likelihood: -317404.923
+39. Current log-likelihood: -317402.437
+40. Current log-likelihood: -317400.794
+41. Current log-likelihood: -317398.988
+42. Current log-likelihood: -317397.920
+43. Current log-likelihood: -317396.586
+44. Current log-likelihood: -317395.882
+45. Current log-likelihood: -317395.225
+46. Current log-likelihood: -317394.809
+47. Current log-likelihood: -317394.686
+48. Current log-likelihood: -317394.251
+49. Current log-likelihood: -317394.147
+50. Current log-likelihood: -317393.913
+Optimal log-likelihood: -317393.782
+Rate parameters:  A-C: 1.94679  A-G: 4.75994  A-T: 0.91841  C-G: 0.94242  C-T: 6.27466  G-T: 1.00000
+Base frequencies:  A: 0.361  C: 0.178  G: 0.239  T: 0.223
+Site proportion and rates:  (0.387,0.040) (0.222,0.496) (0.244,1.367) (0.111,2.785) (0.037,6.274)
+Parameters optimization took 50 rounds (153.340 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.255035 secs using 435.6% CPU
+Computing ML distances took 0.261665 sec (of wall-clock time) 1.144297 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.00119037 secs using 254.5% CPU
+Constructing RapidNJ tree: done in 0.227908 secs using 31.49% CPU
+Computing RapidNJ tree took 0.229323 sec (of wall-clock time) 0.074923 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -318792.487
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 40.554 second
+Computing log-likelihood of 98 initial trees ... 39.953 seconds
+Current best score: -317393.782
+
+Do NNI search on 20 best initial trees
+Optimizing NNI: done in 5.7285 secs using 431% CPU
+Estimate model parameters (epsilon = 0.100)
