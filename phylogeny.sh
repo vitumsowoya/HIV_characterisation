@@ -1,7 +1,7 @@
 #!/bin/bash
 
-mafft --auto --thread 4 hiv_phylo.fa > all_subtypes_aligned.fa
-seqkit rename all_subtypes_aligned.fa -o all_subtypes_aligned_renamed.fa
+seqkit rename hiv_phylo.fa -o all_subtypes_renamed.fa
+mafft --auto --thread 4 all_subtypes_renamed.fa > all_subtypes_aligned_renamed.fa
 iqtree \
 -s all_subtypes_aligned_renamed.fa \
 -m GTR+F+R5 \
