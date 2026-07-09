@@ -17,7 +17,9 @@ iqtree -s HIV_phylo_trial_aligned.fa -m GTR+G -bb 1000 -nt AUTO
 #mafft --auto HIV_B_metadata.fasta > b_aligned.fa
 #seqkit rename b_aligned.fa -o b_aligned_renamed.fa
 # Alignment
+cat u.fasta all_subtypes.fa > hiv_phylo.fa
 mafft --auto --thread 4 all_subtypes.fa > all_subtypes_aligned.fa
+
 
 # Ensure unique sequence names
 seqkit rename all_subtypes_aligned.fa -o all_subtypes_aligned_renamed.fa
