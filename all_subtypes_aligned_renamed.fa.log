@@ -350,3 +350,68 @@ Current best score: -317393.782
 Do NNI search on 20 best initial trees
 Optimizing NNI: done in 5.7285 secs using 431% CPU
 Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -317141.814
+Optimizing NNI: done in 8.39713 secs using 435.9% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -317109.468
+Optimizing NNI: done in 9.90852 secs using 429.7% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 3: -317090.852
+Optimizing NNI: done in 9.20978 secs using 435.7% CPU
+Optimizing NNI: done in 10.7669 secs using 435.8% CPU
+Optimizing NNI: done in 9.95704 secs using 424.6% CPU
+Optimizing NNI: done in 9.72843 secs using 435.8% CPU
+Optimizing NNI: done in 10.9755 secs using 435.5% CPU
+Optimizing NNI: done in 9.88721 secs using 420.7% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 9: -317076.973
+Optimizing NNI: done in 11.8618 secs using 435.8% CPU
+Iteration 10 / LogL: -317187.768 / Time: 0h:7m:47s
+Optimizing NNI: done in 10.0252 secs using 435.6% CPU
+Optimizing NNI: done in 10.5686 secs using 435.5% CPU
+Optimizing NNI: done in 9.74947 secs using 434.1% CPU
+Optimizing NNI: done in 10.0587 secs using 426% CPU
+Optimizing NNI: done in 9.77849 secs using 429.4% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 15: -317071.995
+Optimizing NNI: done in 8.27479 secs using 431.9% CPU
+Optimizing NNI: done in 9.22176 secs using 430% CPU
+Optimizing NNI: done in 7.4244 secs using 423.3% CPU
+Optimizing NNI: done in 8.64161 secs using 433.4% CPU
+Optimizing NNI: done in 10.7334 secs using 433.4% CPU
+Iteration 20 / LogL: -317151.311 / Time: 0h:9m:26s
+Finish initializing candidate tree set (20)
+Current best tree score: -317071.995 / CPU time: 407.198
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Optimizing NNI: done in 7.44315 secs using 427.3% CPU
+Optimizing NNI: done in 7.35553 secs using 424.7% CPU
+Optimizing NNI: done in 7.96092 secs using 435.7% CPU
+Optimizing NNI: done in 7.09814 secs using 432.7% CPU
+Optimizing NNI: done in 8.16067 secs using 429.1% CPU
+Optimizing NNI: done in 9.13585 secs using 424.4% CPU
+Optimizing NNI: done in 7.64654 secs using 435.5% CPU
+Optimizing NNI: done in 9.00837 secs using 432% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 28: -317056.162
+Optimizing NNI: done in 10.1634 secs using 424.8% CPU
+Optimizing NNI: done in 8.92907 secs using 434.5% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 30: -317039.578
+Iteration 30 / LogL: -317039.578 / Time: 0h:11m:1s (0h:37m:59s left)
+Optimizing NNI: done in 6.83211 secs using 429% CPU
+Optimizing NNI: done in 6.40695 secs using 423.2% CPU
+Optimizing NNI: done in 5.95297 secs using 431.5% CPU
+Optimizing NNI: done in 8.73876 secs using 434% CPU
+Optimizing NNI: done in 6.58001 secs using 431.5% CPU
+Optimizing NNI: done in 7.03649 secs using 426.7% CPU
+Optimizing NNI: done in 7.82158 secs using 426.8% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 37: -317033.927
+Optimizing NNI: done in 8.1735 secs using 433.4% CPU
+Optimizing NNI: done in 5.7609 secs using 429.4% CPU
+Optimizing NNI: done in 6.02902 secs using 425.5% CPU
+Iteration 40 / LogL: -317045.758 / Time: 0h:12m:16s (0h:30m:31s left)
+Optimizing NNI: done in 7.46289 secs using 429% CPU
