@@ -32,6 +32,9 @@ print(Bio.__version__)
 #blast your contigs
 blastn -task megablast -query contigs_gc38_45.fasta -db nt -remote -out results.txt -outfmt 6
 
+#remove those which didn't blast with HIV, for me, it was the lowest size contig which was below 1000, so I just removed it
+seqkit seq -m 1000 contigs_gc38_45.fasta > contigs_gc_min1000.fasta
+
 #Validate your results by uploading the highest performing contigs to REGA 
 bwa index HIV_ref.fasta
 
