@@ -22,6 +22,12 @@ python3 ~/tools/quast-5.3.0/quast.py contigs.fasta -o quast_output
 #open the directory containing assembled reads (contigs)
 cd iva_output
 
+#Only choose contigs with 38-45 % GC content
+conda install -c conda-forge biopython
+python
+import Bio
+print(Bio.__version__)
+
 #blast your contigs
 blastn -task megablast -query contigs.fasta -db nt -remote -out results.txt -outfmt 6
 
