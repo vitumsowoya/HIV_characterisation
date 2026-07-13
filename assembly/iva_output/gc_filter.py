@@ -1,8 +1,16 @@
 from Bio import SeqIO
 
-with open("hiv_gc_filtered.fasta", "w") as out:
-    for record in SeqIO.parse("contigs.fasta", "fasta"):
+input_fasta = "contigs.fasta"
+output_fasta = "contigs_gc38_45.fasta"
+
+with open(output_fasta, "w") as out_handle:
+    for record in SeqIO.parse(input_fasta, "fasta"):
         seq = str(record.seq).upper()
-        gc = (seq.count("G") + seq.count("C")) / len(seq) * 100
-        if 39 <= gc <= 45:
-            SeqIO.write(record, out, "fasta")
+
+        gc_count = seq.count("G") + seq.count("C")
+        gc_percent = (gc_count / len(seq)) * 100
+
+        if 38 <= gc_percent <= 45:
+            SeqIO.write(record, out_handle, "fasta")
+
+print("Filtering complete.")
