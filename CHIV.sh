@@ -30,7 +30,7 @@ print(Bio.__version__)
 #run the gc_filter.py script
 
 #blast your contigs
-blastn -task megablast -query contigs.fasta -db nt -remote -out results.txt -outfmt 6
+blastn -task megablast -query contigs_gc38_45.fasta -db nt -remote -out results.txt -outfmt 6
 
 #Validate your results by uploading the highest performing contigs to REGA 
 bwa index HIV_ref.fasta
