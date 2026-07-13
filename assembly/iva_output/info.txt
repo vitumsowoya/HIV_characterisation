@@ -1,0 +1,7 @@
+/home/vmsowoya/miniconda3/envs/iva_env/bin/iva --fr ../Malawi_HIV.trimmed.fastq.gz iva_output
+IVA version 1.0.8
+Using kmc version 3.2.4
+Using kmc_dump version 3.2.4
+Using nucmer version 3.1
+Using samtools version 1.9
+Using smalt version 0.7.6
