@@ -27,6 +27,7 @@ conda install -c conda-forge biopython
 python
 import Bio
 print(Bio.__version__)
+#run the gc_filter.py script
 
 #blast your contigs
 blastn -task megablast -query contigs.fasta -db nt -remote -out results.txt -outfmt 6
