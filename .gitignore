@@ -6,5 +6,9 @@
 *.bam
 *.bam.bai
 *.sam
+*.fastq
+*.bwt
+*.pac
+*.sa
 # Ignore Windows metadata streams
 *:Zone.Identifier
