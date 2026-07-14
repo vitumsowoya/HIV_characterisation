@@ -3,6 +3,8 @@
 *.fq.gz
 *.fa
 *.fasta
-
+*.bam
+*.bam.bai
+*.sam
 # Ignore Windows metadata streams
 *:Zone.Identifier
