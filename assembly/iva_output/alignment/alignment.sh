@@ -1,4 +1,4 @@
-conda create -n ivar_env
+#conda create -n ivar_env
 conda activate ivar_env
 bwa index hxb2.fasta
 bwa mem -t 4 hxb2.fasta ../contigs_gc_min1000.fasta > aln.sam

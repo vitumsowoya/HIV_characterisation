@@ -4,13 +4,13 @@
 fastqc Malawi_HIV.fastq.gz
 
 conda install -c bioconda trimmomatic
-
+conda activate learning
 trimmomatic SE -phred33 \
   Malawi_HIV.fastq.gz Malawi_HIV.trimmed.fastq.gz \
   ILLUMINACLIP:TruSeq3-SE.fa:2:30:10 \
   LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 
-fastqc fastqc Malawi_HIV.trimmed.fastq.gz 
+fastqc Malawi_HIV.trimmed.fastq.gz 
 
 #If Quality is good, proceed to Assembly
 
