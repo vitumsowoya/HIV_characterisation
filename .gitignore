@@ -10,5 +10,10 @@
 *.bwt
 *.pac
 *.sa
+*fastq.bwt
+*fastq.sa
+*fastq.pac
+*.ann
+*fastq.ann
 # Ignore Windows metadata streams
 *:Zone.Identifier
