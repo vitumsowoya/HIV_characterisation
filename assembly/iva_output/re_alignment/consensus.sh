@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#conda activate learning
-source ~/anaconda3/etc/profile.d/conda.sh 
+#conda activate cytb_phylo
+
 bwa index ../contigs_gc_min1000.fasta 
-bwa mem -t 12 ../contigs_gc_min1000.fasta /home/vmsowoya/HIV_characterisation/Malawi_HIV_trimmed.fastq.gz | samtools view -b - | samtools sort -@ 12 -m 512M -o mapped.sorted.bam
+bwa mem -t 12 ../contigs_gc_min1000.fasta /home/vmsowoya/HIV_characterisation/Malawi_HIV.fastq.gz | samtools view -b - | samtools sort -@ 12 -m 512M -o mapped.sorted.bam
 samtools flagstat mapped.sorted.bam
 samtools view -b -F 4 mapped.sorted.bam > mapped_only.bam
 samtools flagstat mapped_only.bam
