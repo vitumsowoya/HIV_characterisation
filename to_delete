@@ -1,0 +1,1 @@
+liftoff -g hxb2_ref.gff3 -o hiv_annotation.gff3 consensus.fa reference.fasta

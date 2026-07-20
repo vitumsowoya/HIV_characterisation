@@ -84,6 +84,8 @@ conda activate liftoff_env
 #install liftoff
 mamba install -c conda-forge -c bioconda liftoff
 
+sudo apt install
+
 #check if it is working
 liftoff -h
 

@@ -1,0 +1,4 @@
+# Input: hxb2.gb
+# working on region:K03455, Human immunodeficiency virus 1, Human immunodeficiency virus type 1 (HXB2), complete genome; HIV1/HTLV-III/LAV reference genome., 21-OCT-2002
+# Possible gene unflattening error withK03455: consult STDERR
+# GFF3 saved to ./hxb2.gb.gff
