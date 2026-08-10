@@ -1,5 +1,18 @@
 #!/bin/bash
-
+# Install necessary packages
+conda create -n hiv_pipeline -c conda-forge -c bioconda \
+    fastqc \
+    trimmomatic \
+    iva \
+    quast \
+    blast \
+    seqkit \
+    bwa \
+    samtools \
+    ivar \
+    liftoff \
+    mafft \
+    iqtree
 #1. Quality check
 fastqc Malawi_HIV.fastq.gz
 
