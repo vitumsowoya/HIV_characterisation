@@ -56,6 +56,14 @@ samtools faidx HIV_consensus.fa
 #11. Extract the polymerase gene and upload to Stanford HIVDB
 seqkit subseq -r 2097:5108 HIV_consensus.fa > pol.fasta
 
-#12. Phylogeny
+#12. Phylogeny; download subtypes B, C, D, F1, F2, G, N, O, P, SIVgor and SIVciz and concatenate them together with the consensus genome into all_subtypes_renamed.fa
+mafft --auto --thread 4 all_subtypes_renamed.fa > all_subtypes_aligned_renamed.fa
+iqtree \
+-s all_subtypes_aligned_renamed.fa \
+-m GTR+F+R5 \
+-bb 1000 \
+-alrt 1000 \
+-nt 4 \
+-redo
 
 #WAY FORWARD: To connect each step without human interference by adding logic functions and using variables, then later use NEXTFLOW.
