@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Install necessary packages
 conda create -n hiv_pipeline -c conda-forge -c bioconda \
     fastqc \
