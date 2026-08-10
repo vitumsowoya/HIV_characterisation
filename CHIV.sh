@@ -13,6 +13,7 @@ conda create -n hiv_pipeline -c conda-forge -c bioconda \
     liftoff \
     mafft \
     iqtree
+conda activate hiv_pipeline
 #1. Quality check
 fastqc Malawi_HIV.fastq.gz
 
