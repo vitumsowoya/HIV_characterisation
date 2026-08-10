@@ -46,11 +46,17 @@ blastn -task megablast -query contigs_gc38_45.fasta -db nt -remote -out results.
 #remove contigs which didn't BLAST positively to HIV, for me (which happened to be less than 1000 bases)
 seqkit seq -m 1000 contigs_gc38_45.fasta > contigs_gc_min1000.fasta
 
-#7. Map adapter-trimmed reads to the filtered contigs and curate consensus genome
+#7. Map adapter-trimmed reads to the filtered contigs, extract mapped reads and curate consensus genome
+bwa index contigs_gc_min1000.fasta
+bwa mem -t 4 contigs_gc_min1000.fasta Malawi_HIV.trimmed.fastq.gz > gc1000.sam
+samtools view -bS gc1000.sam | samtools sort -o gc1000.bam
+samtools index gc1000.bam
+samtools view -F 4 gc1000.bam | cut -f1 | sort -u > mapped_reads.txt
+seqtk subseq Malawi_HIV.trimmed.fastq.gz mapped_reads.txt > gc1000_mapped.fastq
+samtools coverage hiv.bam > coverage_stats.txt
 
-bwa index Malawi_HIV.trimmed.fastq.gz 
-bwa mem -t 4 Malawi_HIV.trimmed.fastq.gz contigs_gc_min1000.fasta  > aln.sam
-bwa mem -t 4 HIV_ref.fasta Malawi_HIV.fastq.gz > aln.sam
+bwa index HIV_ref.fasta
+bwa mem -t 4 HIV_ref.fasta gc1000_mapped.fastq > aln.sam
 samtools view -bS aln.sam | samtools sort -o aln.bam
 samtools index aln.bam
 samtools flagstat aln.bam > mapping_stats.txt
