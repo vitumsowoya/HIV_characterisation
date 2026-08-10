@@ -42,7 +42,7 @@ samtools flagstat aln.bam > mapping_stats.txt
 samtools coverage aln.bam > coverage_stats.txt
 samtools depth -a aln.bam > depth.txt
 samtools mpileup -A -d 0 -Q 0 -f HIV_ref.fasta aln.bam | ivar consensus -p consensus -t 0.6
-#8. Visualise bam file using the interactive genome visualise; you can download it from any of your browsers
+#8. Visualise bam file using the interactive genome visualizer; you can download it from any of your browsers
 
 #9. Transfer annotations from the reference genome to consensus genome using Liftoff; for this, use mamba because it is faster than conda at resolving dependencies
 mamba create -n liftoff_env
@@ -56,4 +56,6 @@ samtools faidx HIV_consensus.fa
 #11. Extract the polymerase gene and upload to Stanford HIVDB
 seqkit subseq -r 2097:5108 HIV_consensus.fa > pol.fasta
 
-#WAY FORWARD: To automate these steps and make an executable sh file.
+#12. Phylogeny
+
+#WAY FORWARD: To connect each step without human interference by adding logic functions and using variables, then later use NEXTFLOW.
