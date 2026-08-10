@@ -1,8 +1,9 @@
 #!/bin/bash
 
-#Quality check
+#1. Quality check
 fastqc Malawi_HIV.fastq.gz
 
+#2 . If quality is good, proceed to trimming adapters
 conda install -c bioconda trimmomatic
 conda activate learning
 trimmomatic SE -phred33 \
@@ -10,26 +11,21 @@ trimmomatic SE -phred33 \
   ILLUMINACLIP:TruSeq3-SE.fa:2:30:10 \
   LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 
+#3. Briefly check quality of trimmed file
 fastqc Malawi_HIV.trimmed.fastq.gz 
 
-#If Quality is good, proceed to Assembly
+#4. If Quality is good, proceed to Assembly and visualise assembly stats
 
 iva --fr Malawi_HIV.trimmed.fastq.gz iva_output
 
 python3 ~/tools/quast-5.3.0/quast.py contigs.fasta -o quast_output
 
-
-#open the directory containing assembled reads (contigs)
+#5. Run a Python script that filters contigs with GC content between 38 and 45%
 cd iva_output
 
-#Only choose contigs with 38-45 % GC content
-conda install -c conda-forge biopython
-python
-import Bio
-print(Bio.__version__)
-#run the gc_filter.py script
+python3 gc_filter.py
 
-#blast your contigs
+#6. BLAST your contigs
 blastn -task megablast -query contigs_gc38_45.fasta -db nt -remote -out results.txt -outfmt 6
 
 #remove those which didn't blast with HIV, for me, it was the lowest size contig which was below 1000, so I just removed it
