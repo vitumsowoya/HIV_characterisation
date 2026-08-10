@@ -59,19 +59,13 @@ samtools depth -a aln.bam > depth.txt
 samtools mpileup -A -d 0 -Q 0 -f HIV_ref.fasta aln.bam | ivar consensus -p consensus -t 0.6
 #8. Visualise bam file using the interactive genome visualizer; you can download it from any of your browsers
 
-#9. Transfer annotations from the reference genome to consensus genome using Liftoff; for this, use mamba because it is faster than conda at resolving dependencies
-mamba create -n liftoff_env
-conda activate liftoff_env
-mamba install -c conda-forge -c bioconda liftoff
-liftoff -g HIV_ref_2.gff3 -o HIV_annotation.gff3 HIV_consensus.fa HIV_Ref_2.fasta
-
-#10. To visualise the annotated genome, use Jbrowse; you need a fai file for this
+#9. To visualise the annotated genome, use Jbrowse; you need a fai file for this
 samtools faidx HIV_consensus.fa
 
-#11. Extract the polymerase gene and upload to Stanford HIVDB
+#10. Extract the polymerase gene and upload to Stanford HIVDB
 seqkit subseq -r 2097:5108 HIV_consensus.fa > pol.fasta
 
-#12. Phylogeny; download subtypes B, C, D, F1, F2, G, N, O, P, SIVgor and SIVciz and concatenate them together with the consensus genome into all_subtypes_renamed.fa
+#11. Phylogeny; download subtypes B, C, D, F1, F2, G, N, O, P, SIVgor and SIVciz and concatenate them together with the consensus genome into all_subtypes_renamed.fa
 mafft --auto --thread 4 all_subtypes_renamed.fa > all_subtypes_aligned_renamed.fa
 iqtree \
 -s all_subtypes_aligned_renamed.fa \
@@ -81,4 +75,4 @@ iqtree \
 -nt 4 \
 -redo
 
-#WAY FORWARD: To connect each step without human interference by adding logic functions and using variables, then later use NEXTFLOW.
+#WAY FORWARD: To connect each step without human interference by adding logic functions and using variables, then later use NEXTFLOW and run the script on HPC.
