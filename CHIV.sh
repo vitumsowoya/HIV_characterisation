@@ -3,7 +3,7 @@
 #1. Quality check
 fastqc Malawi_HIV.fastq.gz
 
-#2 . If quality is good, proceed to trimming adapters
+#2. If quality is good, proceed to trimming adapters
 conda install -c bioconda trimmomatic
 conda activate learning
 trimmomatic SE -phred33 \
@@ -25,74 +25,35 @@ cd iva_output
 
 python3 gc_filter.py
 
-#6. BLAST your contigs
+#6. BLAST your filtered contigs
 blastn -task megablast -query contigs_gc38_45.fasta -db nt -remote -out results.txt -outfmt 6
 
-#remove those which didn't blast with HIV, for me, it was the lowest size contig which was below 1000, so I just removed it
+#remove contigs which didn't BLAST positively to HIV, for me (which happened to be less than 1000 bases)
 seqkit seq -m 1000 contigs_gc38_45.fasta > contigs_gc_min1000.fasta
 
-#Validate your results by uploading the highest performing contigs to REGA 
-bwa index HIV_ref.fasta
+#7. Map adapter-trimmed reads to the filtered contigs and curate consensus genome
 
-#align
-bwa mem -t 4 HIV_ref.fasta contigs.fasta > contigs.sam
-
-# fix BAM pipeline
-samtools view -bS contigs.sam | samtools sort -o contigs.bam
-samtools index contigs.bam
-#Index the subtype specific reference downloaded manually in a local database
-bwa index c.fa
-bwa mem -t 4 c.fa d.fa > alignment.sam
-
-# fix BAM pipeline
-samtools view -bS alignment.sam | samtools sort -o alignment.bam
-samtools index alignment.bam
-samtools index contigs.bam
-mamba create -n ragtag_env
-conda activate ragtag_env
-mamba install -c bioconda ragtag
-ragtag.py scaffold HIV_ref.fasta contigs.fasta
-#align
+bwa index Malawi_HIV.trimmed.fastq.gz 
+bwa mem -t 4 Malawi_HIV.trimmed.fastq.gz contigs_gc_min1000.fasta  > aln.sam
 bwa mem -t 4 HIV_ref.fasta Malawi_HIV.fastq.gz > aln.sam
-
-# fix BAM pipeline
 samtools view -bS aln.sam | samtools sort -o aln.bam
 samtools index aln.bam
 samtools flagstat aln.bam > mapping_stats.txt
 samtools coverage aln.bam > coverage_stats.txt
 samtools depth -a aln.bam > depth.txt
-samtools depth -a aln.bam | awk '{sum+=$3} END {print sum/NR}'
-#visualise bam file using the interactive genome visualiser, you can download it from any of your browsers
-
-#consensus assembly
-
 samtools mpileup -A -d 0 -Q 0 -f HIV_ref.fasta aln.bam | ivar consensus -p consensus -t 0.6
+#8. Visualise bam file using the interactive genome visualise; you can download it from any of your browsers
 
-#install mamba because it is faster than conda at resolvoing dependencies
-conda install -n base -c conda-forge mamba
-
-#create a new environment to run liftoff which will be used for annotating the genome
+#9. Transfer annotations from the reference genome to consensus genome using Liftoff; for this, use mamba because it is faster than conda at resolving dependencies
 mamba create -n liftoff_env
-
-#activate the environment
 conda activate liftoff_env
-
-#install liftoff
 mamba install -c conda-forge -c bioconda liftoff
-
-sudo apt install
-
-#check if it is working
-liftoff -h
-
-#transfer the annotations from the reference gff3 to your consensus genome, creating a new gff3
 liftoff -g HIV_ref_2.gff3 -o HIV_annotation.gff3 HIV_consensus.fa HIV_Ref_2.fasta
 
-#To use jbrowse, create fai file
+#10. To visualise the annotated genome, use Jbrowse; you need a fai file for this
 samtools faidx HIV_consensus.fa
 
+#11. Extract the polymerase gene and upload to Stanford HIVDB
 seqkit subseq -r 2097:5108 HIV_consensus.fa > pol.fasta
 
-#upload to HIVDB to characterise the resistome
-
-#to visualise, use python, download jbroswer from edge/chrome/whatever browser, upload HIV_consensus.fa, HIV_consensus.fai and the gff3 file from liftoff
+#WAY FORWARD: To automate these steps and make an executable sh file.
