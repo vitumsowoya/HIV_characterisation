@@ -19,8 +19,6 @@ conda activate hiv_pipeline
 fastqc Malawi_HIV.fastq.gz
 
 #2. If quality is good, proceed to trimming adapters
-conda install -c bioconda trimmomatic
-conda activate learning
 trimmomatic SE -phred33 \
   Malawi_HIV.fastq.gz Malawi_HIV.trimmed.fastq.gz \
   ILLUMINACLIP:TruSeq3-SE.fa:2:30:10 \
