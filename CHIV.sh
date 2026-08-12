@@ -41,7 +41,7 @@ python3 gc_filter.py
 #6. BLAST your filtered contigs
 blastn -task megablast -query contigs_gc38_45.fasta -db nt -remote -out results.txt -outfmt 6
 
-#remove contigs which didn't BLAST positively to HIV, for me (which happened to be less than 1000 bases)
+#remove contigs which didn't BLAST positively to HIV (for this analysis, it happened to be less than 1000 bases)
 seqkit seq -m 1000 contigs_gc38_45.fasta > contigs_gc_min1000.fasta
 
 #7. Map adapter-trimmed reads to the filtered contigs, extract mapped reads and curate consensus genome
